@@ -1,0 +1,11 @@
+
+<h2><%= @list.name %></h2>
+
+<span class="movie-tag"><%= pluralize(@list.movies.size, "movie") %></span>
+
+<% @list.movies.each do |movie| %>
+  <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+  <%= movie.title %>
+<% end %>
+
+<%= link_to "Back to list", lists_path %>
