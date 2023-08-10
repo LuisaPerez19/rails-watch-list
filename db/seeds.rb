@@ -19,10 +19,5 @@ puts 'Cleaning database'
 
 List.destroy_all
 
-List.create(name: "classic movies")
-List.create(name: "comedy movies")
-List.create(name: "horror movies")
-List.create(name: "drama movies")
-List.create(name: "Superheroes")
 
 puts 'Finished!'
